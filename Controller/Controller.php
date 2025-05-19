@@ -20,7 +20,7 @@ abstract class Controller
     final protected static function isPost() : bool
     {
         return $_SERVER['REQUEST_METHOD'] == "POST";
-    }''
+    }
 
     final protected static function redirect(string $route) : void
     {

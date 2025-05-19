@@ -9,12 +9,12 @@
         LivroController,
         EmprestimoControler
     };
-+
+
     $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
     switch($url)
     {
-        case '/':
+        case './':
             inicialController::index();
         break;
 
@@ -91,6 +91,10 @@
 
         case '/emprestimo/delete/':
             EmprestimoControler::delete();
+        break;
+
+        default:
+
         break;
     }
 
