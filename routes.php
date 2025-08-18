@@ -2,7 +2,7 @@
 
     use App\Controller\{
         AlunoController,
-        inicialController,
+        InicialController,
         LoginController,
         AutorController,
         CategoriaController,
@@ -15,7 +15,7 @@
     switch($url)
     {
         case './':
-            inicialController::index();
+            InicialController::index();
         break;
 
         // rotas para login
