@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controller;
+namespace WebAppBiblioteca\Controller;
 
-use App\Model\Autor;
+use WebAppBiblioteca\Model\Autor;
 use Exception;
 
 final class AutorController extends Controller

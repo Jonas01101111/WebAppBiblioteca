@@ -1,8 +1,8 @@
 <?php
 
-    namespace App\Model\Aluno;
+    namespace WebAppBiblioteca\Model\Aluno;
 
-    use  App\Model\Aluno;
+    use  WebAppBiblioteca\Model\Aluno;
 
     final class AlunoDAO extends DAO
     {

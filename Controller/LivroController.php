@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controller;
+namespace WebAppBiblioteca\Controller;
 
-use App\Model\{ Categoria, Livro, Autor };
+use WebAppBiblioteca\Model\{ Categoria, Livro, Autor };
 use Exception;
 
 final class LivroController extends Controller

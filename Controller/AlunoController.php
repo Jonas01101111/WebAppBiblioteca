@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Controller;
+namespace WebAppBiblioteca\Controller;
 
-use App\Model\Aluno;
+use WebAppBiblioteca\Model\Aluno;
 use Exception;
 
-final class AlunosController extends Controller
+final class AlunoController extends Controller
 {
     public static function index() : void
     {
@@ -18,7 +18,7 @@ final class AlunosController extends Controller
             $model -> getAllRows();
         }catch(Exception $e){
             $model->setError("Ocorreu um erro ao buscar os alunos: ");
-            $model->setError($E->getMessage());
+            $model->setError($e->getMessage());
         }
 
         parent::render('Aluno/lista_aluno.php', $model);

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\DAO;
+namespace WebAppBiblioteca\DAO;
 
 use PDO;
 
@@ -10,6 +10,7 @@ abstract class DAO extends PDO
     public function __construct()
     {
         $dsn = "mysql:host=" . $_ENV['db']['host'] . ";dbname=" . $_ENV['db']['database'];
+        
         if (self::$conexao == null) 
         {
             self::$conexao = new PDO(

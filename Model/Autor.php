@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Model;
+namespace WebAppBiblioteca\Model;
 
-use App\DAO\AutorDAO;
+use WebAppBiblioteca\DAO\AutorDAO;
 use Exception;
 
 final class Autor extends Model

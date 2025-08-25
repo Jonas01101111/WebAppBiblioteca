@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controller;
+namespace WebAppBiblioteca\Controller;
 
-use App\Model\Categoria;
+use WebAppBiblioteca\Model\Categoria;
 use Exception;
 
 final class CategoriaController extends Controller

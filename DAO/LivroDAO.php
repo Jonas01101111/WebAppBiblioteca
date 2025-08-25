@@ -1,8 +1,8 @@
 <?php
 
-namespace App\DAO;
+namespace WebAppBiblioteca\DAO;
 
-use App\Model\Livro;
+use WebAppBiblioteca\Model\Livro;
 
 final class LivroDAO extends DAO
 {
@@ -88,7 +88,7 @@ final class LivroDAO extends DAO
         $stmt->bindValue(1, $id);
         $stmt->execute();
 
-        $model = $stmt->fetchObject("App\Model\Livro");
+        $model = $stmt->fetchObject("WebAppBiblioteca\Model\Livro");
 
         $sql = "SELECT * FROM livro_autor_assoc WHERE id_livro=? ";
         $stmt = parent::$conexao->prepare($sql);  
@@ -109,7 +109,7 @@ final class LivroDAO extends DAO
         $stmt = parent::$conexao->prepare($sql);  
         $stmt->execute();
 
-        return $stmt->fetchAll(DAO::FETCH_CLASS, "App\Model\Livro");
+        return $stmt->fetchAll(DAO::FETCH_CLASS, "WebAppBiblioteca\Model\Livro");
     }
 
     public function delete(int $id) : bool

@@ -6,7 +6,7 @@
         if(file_exists($arquivo)){
             include $arquivo;
         }else{
-            throw new Exception("Arquivo Não Encontrado");
+            throw new Exception("Arquivo Não Encontrado ".$arquivo);
         }
     });
 

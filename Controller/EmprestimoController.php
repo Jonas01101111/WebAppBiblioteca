@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controller;
+namespace WebAppBiblioteca\Controller;
 
-use App\Model\{ Emprestimo, Aluno, Livro };
+use WebAppBiblioteca\Model\{ Emprestimo, Aluno, Livro };
 use Exception;
 
 final class EmprestimoController extends Controller

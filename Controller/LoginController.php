@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controller;
+namespace WebAppBiblioteca\Controller;
 
-use App\Model\Login;
+use WebAppBiblioteca\Model\Login;
 
 final class LoginController
 {

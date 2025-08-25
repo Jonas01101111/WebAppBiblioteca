@@ -1,8 +1,8 @@
 <?php
 
-namespace App\DAO;
+namespace WebAppBiblioteca\DAO;
 
-use App\Model\Categoria;
+use WebAppBiblioteca\Model\Categoria;
 
 final class CategoriaDAO extends DAO
 {
@@ -53,7 +53,7 @@ final class CategoriaDAO extends DAO
         $stmt->bindValue(1, $id);
         $stmt->execute();
 
-        return $stmt->fetchObject("App\Model\Categoria");
+        return $stmt->fetchObject("WebAppBiblioteca\Model\Categoria");
     }
 
     public function select() : array
@@ -63,7 +63,7 @@ final class CategoriaDAO extends DAO
         $stmt = parent::$conexao->prepare($sql);  
         $stmt->execute();
 
-        return $stmt->fetchAll(DAO::FETCH_CLASS, "App\Model\Categoria");
+        return $stmt->fetchAll(DAO::FETCH_CLASS, "WebAppBiblioteca\Model\Categoria");
     }
 
     public function delete(int $id) : bool

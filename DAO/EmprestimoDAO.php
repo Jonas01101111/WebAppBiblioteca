@@ -1,8 +1,8 @@
 <?php
 
-namespace App\DAO;
+namespace WebAppBiblioteca\DAO;
 
-use App\Model\Emprestimo;
+use WebAppBiblioteca\Model\Emprestimo;
 
 final class EmprestimoDAO extends DAO
 {
@@ -62,7 +62,7 @@ final class EmprestimoDAO extends DAO
         $stmt->bindValue(1, $id);
         $stmt->execute();
 
-        $model = $stmt->fetchObject("App\Model\Emprestimo");
+        $model = $stmt->fetchObject("WebAppBiblioteca\Model\Emprestimo");
 
         $model->Dados_Aluno = new AlunoDAO()->selectById($model->Id_Aluno);
         $model->Dados_Livro = new LivroDAO()->selectById($model->Id_Livro);
@@ -77,7 +77,7 @@ final class EmprestimoDAO extends DAO
         $stmt = parent::$conexao->prepare($sql);  
         $stmt->execute();
 
-        $arr_emprestimos = $stmt->fetchAll(DAO::FETCH_CLASS, "App\Model\Emprestimo");
+        $arr_emprestimos = $stmt->fetchAll(DAO::FETCH_CLASS, "WebAppBiblioteca\Model\Emprestimo");
 
         foreach($arr_emprestimos as $item)
         {

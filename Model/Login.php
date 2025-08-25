@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Model;
+namespace WebAppBiblioteca\Model;
 
-use App\DAO\LoginDAO;
+use WebAppBiblioteca\DAO\LoginDAO;
 
 final class Login
 {
